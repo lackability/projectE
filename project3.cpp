@@ -3,13 +3,37 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 
-int main(){
-    int total = 0;
-    for (int number = 0; number < 10000; number++){
-        if (600851475143 % number == 0){
-            total == number;
+std::vector<int> returnFacts(long int number){
+    std::vector<int> vec;
+    for (long int i = 1; i <= sqrt(number); i++){
+        if (number % i == 0){
+            vec.push_back(i);
         }
     }
-    std::cout << total << std::endl;
+    return vec;
+}
+
+bool isPrime(int i){
+    long int temp = 0;
+    for (long int number = sqrt(i) ; number >= 2; number--){
+        if (i % number == 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+int main(){ 
+    long int temp = 0;
+    for (int number = 0; number < returnFacts(600851475143).size(); number++){
+        if (isPrime(returnFacts(600851475143)[number])){
+            if (temp < returnFacts(600851475143)[number]){
+                temp = (returnFacts(600851475143)[number]);
+            }
+        }
+    }  
+    std::cout << temp << std::endl;
+
 }

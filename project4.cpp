@@ -12,7 +12,7 @@ int pMultiples(){
         int temp = 0;
         for (int number2 = 1; number2 <= 99; number2++){
             temp = number1*number2;
-            if (reverse(temp)){
+            if (temp){
             }
         }   return temp;
     }

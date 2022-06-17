@@ -21,7 +21,7 @@
 // 71636269561882670428252483600823257530420752963450
 // Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
-var boob = ["73167176531330624919225119674426574742355349194934",
+var empty = ["73167176531330624919225119674426574742355349194934",
 "96983520312774506326239578318016984801869478851843",
 "85861560789112949495459501737958331952853208805511",
 "12540698747158523863050715693290963295227443043557",
@@ -42,23 +42,23 @@ var boob = ["73167176531330624919225119674426574742355349194934",
 "05886116467109405077541002256983155200055935729725",
 "71636269561882670428252483600823257530420752963450"]
 function find1000(){   
-    var listofBoob = [] 
-    for (var i = 0; i < boob.length; i++){  //y axis max (20)            THIS IS ALSO ONLY CHECKING SIDE TO SIDE
+    var listofEmpty = [] 
+    for (var i = 0; i < empty.length; i++){  //y axis max (20)            THIS IS ALSO ONLY CHECKING SIDE TO SIDE
         for (var g = 0; g <= 37 ; g++){  //x axis max (50)
             var temp = 1
             for (var s = 0; s <= 13; s++){
-                temp = temp*parseInt(boob[i][g+s])
+                temp = temp*parseInt(empty[i][g+s])
                 console.log(temp)
                 if (s == 13){
-                    listofBoob.push(temp)
+                    listofEmpty.push(temp)
                 }
             }          
         }
     }
-    var temp1 = listofBoob[0]      //temp var (easily switchable for  another value)
-    for (var u = 0; u < listofBoob.length; u++){  
-        if (listofBoob[u] > temp1){    // if an element in a list is greater than the temp value
-            temp1 = listofBoob[u];     // make the temp the bigger value, and it cycles through till it finds the biggest value.
+    var temp1 = listofEmpty[0]      //temp var (easily switchable for  another value)
+    for (var u = 0; u < listofEmpty.length; u++){  
+        if (listofEmpty[u] > temp1){    // if an element in a list is greater than the temp value
+            temp1 = listofEmpty[u];     // make the temp the bigger value, and it cycles through till it finds the biggest value.
         }
     }
     return temp1

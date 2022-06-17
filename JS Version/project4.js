@@ -1,19 +1,19 @@
 //A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 //Find the largest palindrome made from the product of two 3-digit numbers.
-function reverseString(Lol){
-    var Lolz = []
-    for (var i = 0; i < Lol.length; i++){
-        Lolz.push(Lol[i])   //pushs characters that make up "Lol" into list Lolz
+function reverseString(text){
+    var textList = []
+    for (var i = 0; i < text.length; i++){
+        textList.push(text[i])   //pushs characters that make up "Lol" into list Lolz
     }
     var reversing = ""
-    for (var j = Lolz.length-1; j >= 0; j--){   // reversed for loop, goes from end of the list to the begigngn on length, j-- increments down
-        reversing += Lolz[j]    //reversing = reversing + Lolz[j]
+    for (var j = textList.length-1; j >= 0; j--){   // reversed for loop, goes from end of the list to the begigngn on length, j-- increments down
+        reversing += textList[j]    //reversing = reversing + Lolz[j]
     }
     return reversing
 }
 
 
-function LiquidShit(){
+function throwing(){
     var throwAway = []
     for (var i = 999; i > 100; i--){    //for loop for the first 999 values
         for (var j = 999; j > 100; j--){        // for loop for the 2nd 999 values
@@ -33,5 +33,5 @@ function LiquidShit(){
 }
 
 
-console.log(LiquidShit())   
+console.log(throwing())   
           

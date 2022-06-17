@@ -3,24 +3,25 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 
-int divisible (){
-    int temp = 0;
-    for (int number = 10; true; number++){
+
+int twentyDivisible(){
+    int increment = 20;
+    int answerCheck = 0;
+    for (int g = 20; true; g += increment){
         for (int i = 1; i <= 20; i++){
-            if (number%i == 0){
-                temp = temp + 1;
-                if (temp == 20){
-                    return number;
+            if (g % i == 0){
+                answerCheck += 1;
+                if (answerCheck == 20){
+                    return g;
                 }
             }
-            else{
-                break;
-            }
         }
-        temp = 0;
+        answerCheck = 0;
     }
 }
-int main (){
-    std::cout << divisible() << std::endl;
+
+int main(){
+    std::cout << twentyDivisible() << std::endl;
 }
